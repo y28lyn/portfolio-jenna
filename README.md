@@ -1,4 +1,4 @@
-# <img width="30px" height="30px" alt="icone" src="https://cdn-icons-png.flaticon.com/128/858/858814.png"> Portfolio d'Ilyes
+# <img width="30px" height="30px" alt="icone" src="[https://cdn-icons-png.flaticon.com/128/858/858814.png](https://github.com/y28lyn/portfolio-jenna/assets/97447648/b5835b6c-e7a5-4f9e-95fd-bd18932fc602)"> Portfolio de Jenna
 
 Bienvenue sur le portfolio de Jenna ! Ce projet a été développé en utilisant React.js, TypeScript et Tailwind CSS. Vous pouvez le consulter en ligne à l'adresse portfolio-jenna.vercel.app.
 
