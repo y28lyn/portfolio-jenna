@@ -1,0 +1,8 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::selection {
+  background-color: #ffc10794;
+  color: white;
+}
