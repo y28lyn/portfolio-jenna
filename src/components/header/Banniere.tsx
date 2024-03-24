@@ -33,7 +33,7 @@ const Banniere: React.FC<BanniereProps> = ({
 
       <div className="absolute inset-0 block bg-black/70 md:block"></div>
 
-      <div className="container mx-auto text-left relative ml-10 px-10 md:px-0">
+      <div className="container text-left relative md:ml-10 px-10 md:px-0">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
           {title}
         </h1>
