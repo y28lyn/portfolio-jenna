@@ -135,7 +135,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <nav className="py-4 absolute w-full h-full bg-white dark:bg-[#101314] lg:hidden z-50">
+        <nav className="py-4 fixed w-full h-full bg-white dark:bg-[#101314] lg:hidden z-50">
           <div className="px-4 mx-auto sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
