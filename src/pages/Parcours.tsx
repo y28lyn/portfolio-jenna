@@ -1,6 +1,39 @@
+import Timeline from "../components/article/Timeline";
 import Banniere from "../components/header/Banniere";
+import {
+  faGraduationCap,
+  faAward,
+  faUserGraduate,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Parcours = () => {
+  const timeline = [
+    {
+      icon: faAward,
+      title: "Bac ASSP",
+      date: "Septembre 2019 - Juillet 2021",
+      desc: "Lycée Danielle Casanova",
+      photoUrl:
+        "https://danielle-casanova.ent.auvergnerhonealpes.fr/lectureFichiergw.do?ID_FICHIER=3209",
+    },
+    {
+      icon: faGraduationCap,
+      title: "FCIL",
+      date: "Septembre 2021 - Juillet 2022",
+      desc: "Lycée Aragon Picasso",
+      photoUrl:
+        "https://www.gcc-groupe.com/wp-content/uploads/2021/08/shoootin-photo-1-1110x430.jpg",
+    },
+    {
+      icon: faUserGraduate,
+      title: "BTS SIO",
+      date: "Septembre 2022 - Juillet 2024",
+      desc: "Lycée Jacques Brel",
+      photoUrl:
+        "https://www.expressions-venissieux.fr/wp-content/uploads/2014/08/Brel-1200x801.jpg",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -11,7 +44,11 @@ const Parcours = () => {
           buttonLabel="Explorer"
         />
       </header>
-      <main id="main" className="h-screen"></main>
+      <main id="main">
+        <section className="flex items-center justify-center py-6 pl-6">
+          <Timeline timeline={timeline} />
+        </section>
+      </main>
     </>
   );
 };

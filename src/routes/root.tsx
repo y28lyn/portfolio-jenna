@@ -8,13 +8,20 @@ import "../style.css";
 
 const Root = () => {
   return (
-    <div className="bg-white dark:bg-[#101314]">
-      <Navbar />
-      <ScrollRestoration />
-      <Outlet />
-      <SwitchButton />
-      <Footer />
-    </div>
+    <>
+      <link
+        rel="stylesheet"
+        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+      />
+
+      <div className="bg-white dark:bg-[#101314]">
+        <Navbar />
+        <ScrollRestoration />
+        <Outlet />
+        <SwitchButton />
+        <Footer />
+      </div>
+    </>
   );
 };
 

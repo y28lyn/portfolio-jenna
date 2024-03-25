@@ -144,7 +144,7 @@ const Navbar = () => {
 
               <button
                 type="button"
-                className="inline-flex p-2 text-black dark:text-white transition-all duration-200 rounded-md focus:bg-amber-100 hover:bg-amber-100"
+                className="inline-flex p-2 text-black dark:text-white transition-all duration-200 rounded-md"
                 onClick={toggleMobileMenu}
                 aria-label="Close Menu"
               >
