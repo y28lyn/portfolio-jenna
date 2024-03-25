@@ -1,7 +1,9 @@
+/* Scroll */
 ::-webkit-scrollbar {
   width: 0;
 }
 
+/* Selection */
 ::selection {
   background-color: #ffc10794;
 }
