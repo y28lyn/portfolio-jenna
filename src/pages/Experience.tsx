@@ -1,6 +1,60 @@
+import React from "react";
+import Card from "../components/article/Card";
 import Banniere from "../components/header/Banniere";
 
 const Experience = () => {
+  // Définissez vos données d'expérience professionnelle sous forme de tableau d'objets
+  const experiences = [
+    {
+      title: "Titre de l'expérience 1",
+      date: "Date de l'expérience 1",
+      desc: "Description de l'expérience 1",
+      photoUrl: "URL de la photo de l'expérience 1",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+    {
+      title: "Titre de l'expérience 2",
+      date: "Date de l'expérience 2",
+      desc: "Description de l'expérience 2",
+      photoUrl: "URL de la photo de l'expérience 2",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -11,7 +65,17 @@ const Experience = () => {
           buttonLabel="Explorer"
         />
       </header>
-      <main id="main" className="h-screen"></main>
+      <main id="main" className="grid grid-cols-1 md:grid-cols-3 gap-y-6 p-6">
+        {experiences.map((experience, index) => (
+          <Card
+            key={index}
+            title={experience.title}
+            date={experience.date}
+            desc={experience.desc}
+            photoUrl={experience.photoUrl}
+          />
+        ))}
+      </main>
     </>
   );
 };

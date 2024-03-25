@@ -10,7 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, date, desc, photoUrl }) => {
   return (
     <>
-      <div className="w-[80vw] md:w-[30vw] flex flex-col items-center rounded-[10px] border-[1px] border-gray-200  mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-slate-800 dark:text-white dark:shadow-none">
+      <div className="h-auto w-[80vw] md:w-96 flex flex-col items-center rounded-[10px] border-[1px] border-gray-200  mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-slate-800 dark:text-white dark:shadow-none">
         <div className="relative flex h-32 w-full justify-center rounded-xl bg-cover">
           <img
             src="https://i.pinimg.com/564x/11/b7/33/11b7338949adcd14a90841db9d6b8cf1.jpg"
