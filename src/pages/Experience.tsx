@@ -1,9 +1,7 @@
-import React from "react";
 import Card from "../components/article/Card";
 import Banniere from "../components/header/Banniere";
 
 const Experience = () => {
-  // Définissez vos données d'expérience professionnelle sous forme de tableau d'objets
   const experiences = [
     {
       title: "Titre de l'expérience 1",
