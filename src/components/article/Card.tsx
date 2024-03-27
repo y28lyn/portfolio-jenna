@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
             src={bannerUrl}
             className="absolute flex h-32 w-full justify-center rounded-xl bg-cover object-cover"
           />
-          <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-full border-[4px] border-gray-200 dark:!border-neutral-6 00">
+          <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-full border-[4px] border-gray-200 dark:!border-neutral-600">
             <img className="h-full w-full rounded-full" src={photoUrl} alt="" />
           </div>
         </div>
