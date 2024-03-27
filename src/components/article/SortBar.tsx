@@ -14,7 +14,7 @@ const SortBar: React.FC<SortBarProps> = ({ categories, onSortChange }) => {
   };
 
   return (
-    <div className="flex justify-center gap-4 my-4 bg-gray-100 dark:bg-neutral-800 text-[#101314] dark:text-white p-2 rounded font-bold">
+    <div className="flex flex-col md:flex-row justify-center gap-4 my-4 bg-gray-100 dark:bg-neutral-800 text-[#101314] dark:text-white p-2 rounded font-bold">
       <button
         className={`${
           selectedCategory === ""

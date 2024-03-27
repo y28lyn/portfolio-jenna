@@ -1,6 +1,73 @@
+import { useState } from "react";
+import Card from "../components/article/Card";
 import Banniere from "../components/header/Banniere";
+import SortBar from "../components/article/SortBar";
 
 const Certification = () => {
+  const experiences = [
+    {
+      title: "AWS ACADEMY CLOUD FOUNDATIONS",
+      date: "Septembre 2023 -  Aujourd'hui",
+      desc: "Amazon Web Service",
+      photoUrl:
+        "https://tse4.mm.bing.net/th?id=OIP.2zUhyllIiKBamSNJ3_xiwwHaHa&pid=Api&P=0&h=180",
+      bannerUrl:
+        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+      category: "Cloud",
+    },
+    {
+      title: "CYBERSECURITY ESSENTIALS",
+      date: "Septembre 2022 - Janvier 2023",
+      desc: "Cisco Networking Academy",
+      photoUrl: "https://www.svgrepo.com/show/331335/cisco.svg",
+      bannerUrl:
+        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+      category: "Cybersécurité",
+    },
+    {
+      title: "NETWORKING ESSENTIALS",
+      date: "Septembre 2022 - Janvier 2023",
+      desc: "Cisco Networking Academy",
+      photoUrl: "https://www.svgrepo.com/show/331335/cisco.svg",
+      bannerUrl:
+        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+      category: "Cybersécurité",
+    },
+    {
+      title: "MOOC",
+      date: "Septembre 2022 - Janvier 2023",
+      desc: "SecNum Academy",
+      photoUrl:
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi00-r8FkjduDa3rjittcmxmGebTw9jkrlv0VpWPeWY3klRcooGrXONuzRy5Rx3SQJiUCTzsgAAVAH9E7LSzRc1BrBX_hXWPlobm7y4CH7m6qHyim8oRUigcEX82LBHpcUNULaFVfRAvaw/s1600/anssi.png",
+      bannerUrl:
+        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+      category: "Cybersécurité",
+    },
+    {
+      title: "HTML/CSS  ",
+      date: "Novembre 2020 - Décembre 2020",
+      desc: "Openclassroom",
+      photoUrl:
+        "https://static.vecteezy.com/system/resources/previews/007/482/254/non_2x/icon-custom-coding-suitable-for-programming-symbol-color-mate-style-simple-design-editable-design-template-simple-symbol-illustration-vector.jpg",
+      bannerUrl:
+        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+      category: "Développement",
+    },
+  ];
+
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+
+  const categories = ["Cloud", "Cybersécurité", "Développement"];
+
+  const filteredExperiences = selectedCategory
+    ? experiences.filter(
+        (experience) => experience.category === selectedCategory
+      )
+    : experiences;
+
+  const handleSortChange = (category: string) => {
+    setSelectedCategory(category);
+  };
   return (
     <>
       <header>
@@ -11,7 +78,21 @@ const Certification = () => {
           buttonLabel="Explorer"
         />
       </header>
-      <main id="main" className="h-screen"></main>
+      <main id="main" className="flex flex-col items-center">
+        <SortBar categories={categories} onSortChange={handleSortChange} />
+        <section className="flex items-center flex-wrap gap-6 p-6">
+          {filteredExperiences.map((experience, index) => (
+            <Card
+              key={index}
+              title={experience.title}
+              date={experience.date}
+              desc={experience.desc}
+              photoUrl={experience.photoUrl}
+              bannerUrl={experience.bannerUrl}
+            />
+          ))}
+        </section>
+      </main>{" "}
     </>
   );
 };
