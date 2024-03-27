@@ -1,11 +1,14 @@
+import { useEffect, useState } from "react";
+import Modal from "./Modal";
+
 interface CardProps {
   title: string;
   date: string;
   desc: string;
   photoUrl: string;
   bannerUrl: string;
-  githubLink?: string; // Ajout de la propriété githubLink
-  externalLink?: string; // Ajout de la propriété externalLink
+  githubLink?: string;
+  externalLink?: string;
   showGithubButton?: boolean;
   showLinkButton?: boolean;
   showBasicButton?: boolean;
@@ -23,6 +26,27 @@ const Card: React.FC<CardProps> = ({
   showLinkButton = false,
   showBasicButton = false,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset"; // Rétablir le défilement lorsque le composant est démonté
+    };
+  }, [isModalOpen]);
   return (
     <>
       <div className="h-auto flex-1 basis-[500px] w-[80vw] md:w-96 flex flex-col items-center text-center rounded-[10px] border-[1px] border-gray-200 mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-neutral-600 dark:!bg-neutral-800 dark:text-white dark:shadow-none">
@@ -104,10 +128,14 @@ const Card: React.FC<CardProps> = ({
             </a>
           )}
           {showBasicButton && (
-            <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded">
+            <button
+              onClick={handleOpenModal}
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
+            >
               Voir plus
             </button>
           )}
+          {isModalOpen && <Modal onClose={handleCloseModal} />}
         </div>
       </div>
     </>
