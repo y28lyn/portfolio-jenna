@@ -111,7 +111,7 @@ const Navbar = () => {
 
             <button
               type="button"
-              className="inline-flex p-2 ml-5 text-white transition-all duration-200 rounded-md lg:hidden focus:bg-amber-100 hover:bg-amber-100"
+              className="inline-flex p-2 ml-5 text-white transition-all duration-200 rounded-md lg:hidden"
               onClick={toggleMobileMenu}
             >
               <svg
@@ -166,7 +166,7 @@ const Navbar = () => {
             </div>
 
             <div className="mt-6">
-              <div className="flex flex-col space-y-2 text-black dark:text-white">
+              <div className="flex flex-col space-y-2 gap-2 text-black dark:text-white">
                 {navLinks.map((link) => (
                   <NavItem key={link.title} {...link} onClick={closeMenu} />
                 ))}
