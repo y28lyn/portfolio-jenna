@@ -41,7 +41,7 @@ const Situation = () => {
         "https://images.unsplash.com/photo-1591824353737-61237487acf4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       bannerUrl:
         "https://i.pinimg.com/564x/75/bb/64/75bb64a7d68a72d35309b11ed8215286.jpg",
-      category: "Cybersécurité",
+      category: "PHP",
       showBasicButton: true,
       showGithubButton: true,
       githubLink: "",

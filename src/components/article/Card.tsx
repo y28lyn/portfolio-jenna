@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({
     }
 
     return () => {
-      document.body.style.overflow = "unset"; // Rétablir le défilement lorsque le composant est démonté
+      document.body.style.overflow = "unset";
     };
   }, [isModalOpen]);
   return (
