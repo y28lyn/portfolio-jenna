@@ -8,6 +8,7 @@ interface TimelineItem {
   date: string;
   desc: string;
   photoUrl: string;
+  bannerUrl: string;
 }
 
 interface TimelineProps {
@@ -31,6 +32,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
               date={item.date}
               desc={item.desc}
               photoUrl={item.photoUrl}
+              bannerUrl={item.bannerUrl}
             />
           </div>
         </li>

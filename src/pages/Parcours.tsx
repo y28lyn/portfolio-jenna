@@ -15,6 +15,8 @@ const Parcours = () => {
       desc: "Lycée Danielle Casanova",
       photoUrl:
         "https://danielle-casanova.ent.auvergnerhonealpes.fr/lectureFichiergw.do?ID_FICHIER=3209",
+      bannerUrl:
+        "https://i.pinimg.com/564x/11/b7/33/11b7338949adcd14a90841db9d6b8cf1.jpg",
     },
     {
       icon: faGraduationCap,
@@ -23,6 +25,8 @@ const Parcours = () => {
       desc: "Lycée Aragon Picasso",
       photoUrl:
         "https://www.gcc-groupe.com/wp-content/uploads/2021/08/shoootin-photo-1-1110x430.jpg",
+      bannerUrl:
+        "https://i.pinimg.com/564x/11/b7/33/11b7338949adcd14a90841db9d6b8cf1.jpg",
     },
     {
       icon: faUserGraduate,
@@ -31,6 +35,8 @@ const Parcours = () => {
       desc: "Lycée Jacques Brel",
       photoUrl:
         "https://www.expressions-venissieux.fr/wp-content/uploads/2014/08/Brel-1200x801.jpg",
+      bannerUrl:
+        "https://i.pinimg.com/564x/11/b7/33/11b7338949adcd14a90841db9d6b8cf1.jpg",
     },
   ];
 
