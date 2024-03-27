@@ -4,7 +4,7 @@ import Banniere from "../components/header/Banniere";
 import SortBar from "../components/article/SortBar";
 
 const Certification = () => {
-  const experiences = [
+  const certifications = [
     {
       title: "AWS ACADEMY CLOUD FOUNDATIONS",
       date: "Septembre 2023 -  Aujourd'hui",
@@ -59,15 +59,16 @@ const Certification = () => {
 
   const categories = ["Cloud", "Cybersécurité", "Développement"];
 
-  const filteredExperiences = selectedCategory
-    ? experiences.filter(
-        (experience) => experience.category === selectedCategory
+  const filteredCertifications = selectedCategory
+    ? certifications.filter(
+        (certifications) => certifications.category === selectedCategory
       )
-    : experiences;
+    : certifications;
 
   const handleSortChange = (category: string) => {
     setSelectedCategory(category);
   };
+
   return (
     <>
       <header>
@@ -81,18 +82,18 @@ const Certification = () => {
       <main id="main" className="flex flex-col items-center">
         <SortBar categories={categories} onSortChange={handleSortChange} />
         <section className="flex items-center flex-wrap gap-6 p-6">
-          {filteredExperiences.map((experience, index) => (
+          {filteredCertifications.map((certifications, index) => (
             <Card
               key={index}
-              title={experience.title}
-              date={experience.date}
-              desc={experience.desc}
-              photoUrl={experience.photoUrl}
-              bannerUrl={experience.bannerUrl}
+              title={certifications.title}
+              date={certifications.date}
+              desc={certifications.desc}
+              photoUrl={certifications.photoUrl}
+              bannerUrl={certifications.bannerUrl}
             />
           ))}
         </section>
-      </main>{" "}
+      </main>
     </>
   );
 };
