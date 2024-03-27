@@ -44,7 +44,7 @@ const Situation = () => {
       category: "Cybersécurité",
       showBasicButton: true,
       showGithubButton: true,
-      externalLink: "",
+      githubLink: "",
     },
     {
       title: "Sharepoint",
