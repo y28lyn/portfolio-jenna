@@ -16,7 +16,7 @@ const Situation = () => {
       category: ".NET",
       showBasicButton: true,
       showGithubButton: true,
-      showLinkButton: true,
+      githubLink: "",
     },
     {
       title: "SGRC",
@@ -30,6 +30,8 @@ const Situation = () => {
       showBasicButton: true,
       showGithubButton: true,
       showLinkButton: true,
+      githubLink: "https://github.com/y28lyn/sgrc",
+      externalLink: "https://brodet.fr/SGRC/",
     },
     {
       title: "Fatalys",
@@ -42,7 +44,7 @@ const Situation = () => {
       category: "Cybersécurité",
       showBasicButton: true,
       showGithubButton: true,
-      showLinkButton: true,
+      externalLink: "",
     },
     {
       title: "Sharepoint",
@@ -54,8 +56,6 @@ const Situation = () => {
         "https://i.pinimg.com/564x/75/bb/64/75bb64a7d68a72d35309b11ed8215286.jpg",
       category: "Sharepoint",
       showBasicButton: true,
-      showGithubButton: true,
-      showLinkButton: true,
     },
     {
       title: "Sharepoint Designer",
@@ -67,8 +67,6 @@ const Situation = () => {
         "https://i.pinimg.com/564x/75/bb/64/75bb64a7d68a72d35309b11ed8215286.jpg",
       category: "Sharepoint",
       showBasicButton: true,
-      showGithubButton: true,
-      showLinkButton: true,
     },
     {
       title: "GLPI",
@@ -80,8 +78,6 @@ const Situation = () => {
         "https://i.pinimg.com/564x/75/bb/64/75bb64a7d68a72d35309b11ed8215286.jpg",
       category: "Réseau",
       showBasicButton: true,
-      showGithubButton: true,
-      showLinkButton: true,
     },
   ];
 
@@ -122,6 +118,8 @@ const Situation = () => {
               showBasicButton={situations.showBasicButton}
               showGithubButton={situations.showGithubButton}
               showLinkButton={situations.showLinkButton}
+              githubLink={situations.githubLink}
+              externalLink={situations.externalLink}
             />
           ))}
         </section>
