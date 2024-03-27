@@ -21,7 +21,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
       {timeline.map((item, index) => (
         <li key={index} className="relative mb-6 sm:mb-0">
           <div className="flex items-center">
-            <div className="flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-0 ring-gray-50 dark:bg-amber-300 sm:ring-8 dark:ring-gray-900 shrink-0 p-6">
+            <div className="flex items-center justify-center w-6 h-6 bg-amber-100 rounded-full ring-0 ring-gray-50 dark:bg-amber-300 sm:ring-8 dark:ring-neutral-900 shrink-0 p-6">
               <FontAwesomeIcon icon={item.icon}></FontAwesomeIcon>
             </div>
             <div className="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>

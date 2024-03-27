@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Card from "../components/article/Card";
 import Banniere from "../components/header/Banniere";
+import SortBar from "../components/article/SortBar";
 
 const Experience = () => {
   const experiences = [
@@ -11,6 +13,7 @@ const Experience = () => {
         "https://i0.wp.com/venissieuxinfos.fr/wp-content/uploads/Lycee-jacques-brel.png?fit=647%2C350&ssl=1",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Informatique",
     },
     {
       title: "Développeuse DevOps",
@@ -20,6 +23,7 @@ const Experience = () => {
         "https://www.elcia.com/wp-content/uploads/batiment-elcia-brignais-650x414.png",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Informatique",
     },
     {
       title: "Technicienne en maintenance informatique",
@@ -29,6 +33,7 @@ const Experience = () => {
         "https://aragon-picasso.ent.auvergnerhonealpes.fr/lectureFichiergw.do?ID_FICHIER=1456",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Informatique",
     },
     {
       title: "Auxiliaire de puériculture",
@@ -38,15 +43,17 @@ const Experience = () => {
         "https://cdn-s-www.leprogres.fr/images/334A9A95-C9CC-405F-BC36-6775C67505CA/NW_raw/la-creche-marie-antoinette-goubelly-de-givors-est-fermee-provisoirement-jusqu-au-20-septembre-inclus-photo-progres-redouja-merabti-1599490134.jpg",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Hospitalier",
     },
     {
-      title: "Agente de service hospitalier",
+      title: "Agent de service hospitalier",
       date: "Novembre 2020 - Décembre 2020",
       desc: "EHPAD Sainte Anne",
       photoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTI9YISd2SihNXBptXGM9UcWUY9mGzHtxoPFTVflQR2g&s",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Hospitalier",
     },
     {
       title: "Agente de service hospitalier",
@@ -56,6 +63,7 @@ const Experience = () => {
         "https://cdn-s-www.leprogres.fr/images/8A290905-7F9D-4886-B7C4-C1346FE0B64F/NW_raw/l-hopital-de-montgelas-photo-archives-progres-andre-montet-1645099655.jpg",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Hospitalier",
     },
     {
       title: "Assistante maternelle",
@@ -65,8 +73,23 @@ const Experience = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKNrvC50UwLtqzip5N9Qz_Ujdk2q8YHFIp1NfbycXBiA&s",
       bannerUrl:
         "https://i.pinimg.com/564x/ff/00/14/ff0014ba7df1030502185749d56b0845.jpg",
+      category: "Hospitalier",
     },
   ];
+
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+
+  const categories = ["Informatique", "Hospitalier"];
+
+  const filteredExperiences = selectedCategory
+    ? experiences.filter(
+        (experience) => experience.category === selectedCategory
+      )
+    : experiences;
+
+  const handleSortChange = (category: string) => {
+    setSelectedCategory(category);
+  };
 
   return (
     <>
@@ -78,17 +101,20 @@ const Experience = () => {
           buttonLabel="Explorer"
         />
       </header>
-      <main id="main" className="flex items-center flex-wrap gap-6 p-6">
-        {experiences.map((experience, index) => (
-          <Card
-            key={index}
-            title={experience.title}
-            date={experience.date}
-            desc={experience.desc}
-            photoUrl={experience.photoUrl}
-            bannerUrl={experience.bannerUrl}
-          />
-        ))}
+      <main id="main" className="flex flex-col items-center">
+        <SortBar categories={categories} onSortChange={handleSortChange} />
+        <section className="flex items-center flex-wrap gap-6 p-6">
+          {filteredExperiences.map((experience, index) => (
+            <Card
+              key={index}
+              title={experience.title}
+              date={experience.date}
+              desc={experience.desc}
+              photoUrl={experience.photoUrl}
+              bannerUrl={experience.bannerUrl}
+            />
+          ))}
+        </section>
       </main>
     </>
   );
