@@ -50,7 +50,7 @@ const Situation = () => {
       externalLink: "https://brodet.fr/SGRC/",
       modalContent: {
         title: "SGRC",
-        description: "",
+        description: "Description",
         image: "",
         context: "",
         needs: "",
