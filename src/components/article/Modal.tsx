@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   return (
     <div className="fixed z-50 top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50 p-6 md:p-0">
-      <div className="bg-white dark:bg-[#101314] p-6 rounded-lg h-[80vh] w-[70%] overflow-auto text-left">
+      <div className="bg-white dark:bg-[#101314] p-6 rounded-lg h-[80vh] w-full md:w-[70%] overflow-auto text-left">
         <h2 className="text-3xl font-bold mb-4 underline text-black dark:text-white">
           {title}
         </h2>
