@@ -91,7 +91,7 @@ const Navbar = () => {
           <nav className="relative flex items-center justify-between h-16 md:h-[12vh]">
             <div className="hidden md:flex flex-row gap-2">
               <Link to="/" className="flex flex-row gap-2">
-                <img src="/portfolio-icon.png" alt="" className="w-8 h-8" />
+                <img src="/portfolio-icon.webp" alt="" className="w-8 h-8" />
                 <h2 className="text-amber-500 text-2xl font-bold">Portfolio</h2>
               </Link>
             </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
 
             <div className="md:hidden block">
               <Link to="/" className="flex flex-row gap-2">
-                <img src="/portfolio-icon.png" alt="" className="w-8 h-8" />
+                <img src="/portfolio-icon.webp" alt="" className="w-8 h-8" />
                 <h2 className="text-amber-500 text-2xl font-bold">Portfolio</h2>
               </Link>
             </div>

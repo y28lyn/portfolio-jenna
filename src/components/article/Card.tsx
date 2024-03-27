@@ -12,6 +12,17 @@ interface CardProps {
   showGithubButton?: boolean;
   showLinkButton?: boolean;
   showBasicButton?: boolean;
+  modalContent: {
+    title: string;
+    description: string;
+    image: string;
+    context: string;
+    needs: string;
+    environment: string;
+    realization: string;
+    link?: string;
+    conclusion: string;
+  };
 }
 
 const Card: React.FC<CardProps> = ({
@@ -25,6 +36,7 @@ const Card: React.FC<CardProps> = ({
   showGithubButton = false,
   showLinkButton = false,
   showBasicButton = false,
+  modalContent,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -135,7 +147,9 @@ const Card: React.FC<CardProps> = ({
               Voir plus
             </button>
           )}
-          {isModalOpen && <Modal onClose={handleCloseModal} />}
+          {isModalOpen && (
+            <Modal onClose={handleCloseModal} {...modalContent} />
+          )}
         </div>
       </div>
     </>
