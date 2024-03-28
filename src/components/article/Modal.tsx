@@ -66,7 +66,7 @@ const Modal: React.FC<ModalProps> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Lien vers plus d'informations
+              {link}
             </a>
           </div>
         )}

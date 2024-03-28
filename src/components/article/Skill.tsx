@@ -22,7 +22,7 @@ const Skill: React.FC<SkillProps> = ({ skills }) => {
                 <h6 className="text-lg mb-1 font-semibold text-black dark:text-white">
                   {skill.title}
                 </h6>
-                <p className="mb-4 text-md text-black dark:text-white">
+                <p className="mb-4 text-md text-gray-800 dark:text-gray-200">
                   {skill.description}
                 </p>
               </div>
