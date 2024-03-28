@@ -12,7 +12,7 @@ const Certification = () => {
       photoUrl:
         "https://tse4.mm.bing.net/th?id=OIP.2zUhyllIiKBamSNJ3_xiwwHaHa&pid=Api&P=0&h=180",
       bannerUrl:
-        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+        "https://i.pinimg.com/564x/c8/bb/b6/c8bbb6f599ede52d034e2c7aa0da5e1c.jpg",
       category: "Cloud",
     },
     {
@@ -21,7 +21,7 @@ const Certification = () => {
       desc: "Cisco Networking Academy",
       photoUrl: "https://www.svgrepo.com/show/331335/cisco.svg",
       bannerUrl:
-        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+        "https://i.pinimg.com/564x/c8/bb/b6/c8bbb6f599ede52d034e2c7aa0da5e1c.jpg",
       category: "Cybersécurité",
     },
     {
@@ -30,7 +30,7 @@ const Certification = () => {
       desc: "Cisco Networking Academy",
       photoUrl: "https://www.svgrepo.com/show/331335/cisco.svg",
       bannerUrl:
-        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+        "https://i.pinimg.com/564x/c8/bb/b6/c8bbb6f599ede52d034e2c7aa0da5e1c.jpg",
       category: "Cybersécurité",
     },
     {
@@ -40,7 +40,7 @@ const Certification = () => {
       photoUrl:
         "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi00-r8FkjduDa3rjittcmxmGebTw9jkrlv0VpWPeWY3klRcooGrXONuzRy5Rx3SQJiUCTzsgAAVAH9E7LSzRc1BrBX_hXWPlobm7y4CH7m6qHyim8oRUigcEX82LBHpcUNULaFVfRAvaw/s1600/anssi.png",
       bannerUrl:
-        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+        "https://i.pinimg.com/564x/c8/bb/b6/c8bbb6f599ede52d034e2c7aa0da5e1c.jpg",
       category: "Cybersécurité",
     },
     {
@@ -50,7 +50,7 @@ const Certification = () => {
       photoUrl:
         "https://static.vecteezy.com/system/resources/previews/007/482/254/non_2x/icon-custom-coding-suitable-for-programming-symbol-color-mate-style-simple-design-editable-design-template-simple-symbol-illustration-vector.jpg",
       bannerUrl:
-        "https://i.pinimg.com/564x/6f/52/d3/6f52d3bb565c7f3a92134326e0a7f461.jpg",
+        "https://i.pinimg.com/564x/c8/bb/b6/c8bbb6f599ede52d034e2c7aa0da5e1c.jpg",
       category: "Développement",
     },
   ];
