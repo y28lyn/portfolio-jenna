@@ -6,7 +6,7 @@ import SortBar from "../components/article/SortBar";
 const Situation = () => {
   const situations = [
     {
-      title: "EHPAD MedHub",
+      title: "MedHub",
       date: "Mars 2024 - Mai 2024",
       desc: "Application mobile de gestion de médicament",
       photoUrl:
@@ -18,18 +18,18 @@ const Situation = () => {
       showGithubButton: true,
       githubLink: "",
       modalContent: {
-        title: "EHPAD MedHub",
+        title: "MedHub",
         description:
-          "EHPAD MedHub est une application MAUI pour la gestion des stocks de médicaments dans les EHPAD, facilitant les commandes rapides pour les résidents âgés et/ou handicapés. Elle permet également la comparaison de médicaments spécifiques pour des maladies telles que le cancer, l'Alzheimer et Parkinson.",
+          "Medhub est une application MAUI pour la gestion des stocks de médicaments dans les EHPAD, facilitant les commandes rapides pour les résidents âgés et/ou handicapés. Elle permet également la comparaison de médicaments spécifiques pour des maladies telles que le cancer, l'Alzheimer et Parkinson.",
         image: "https://jinoh.co/wp-content/uploads/2022/01/netMauiLogo.webp",
         context:
-          "Dans le cadre du projet réalisé en deuxième année de mon BTS SIO SLAM, j'ai développé l'application EHPAD MedHub pour répondre aux besoins de gestion des stocks de médicaments dans les EHPAD affiliés à la société fictive GSB, spécialisée dans les solutions biomédicales. Cette application permet une gestion efficace des stocks, des commandes rapides et offre la possibilité de comparer différents médicaments pour des maladies telles que le cancer, l'Alzheimer et Parkinson, facilitant ainsi la prise en charge médicale des résidents âgés et/ou handicapés.",
+          "Dans le cadre du projet réalisé en deuxième année de mon BTS SIO SLAM, j'ai développé l'application Medhub pour répondre aux besoins de gestion des stocks de médicaments dans les EHPAD affiliés à la société fictive GSB, spécialisée dans les solutions biomédicales. Cette application permet une gestion efficace des stocks, des commandes rapides et offre la possibilité de comparer différents médicaments pour des maladies telles que le cancer, l'Alzheimer et Parkinson, facilitant ainsi la prise en charge médicale des résidents âgés et/ou handicapés.",
         needs:
           "Il était impératif de répondre aux besoins spécifiques des EHPAD en matière de gestion des stocks de médicaments, de facilitation des commandes rapides et de possibilité de comparer différents médicaments pour des maladies telles que le cancer, l'Alzheimer et Parkinson.",
         environment:
-          "Pour développer l'application EHPAD MedHub, j'ai utilisé un environnement technologique moderne comprenant Visual Studio 2022 comme environnement de développement intégré (IDE), .NET MAUI pour la création d'interfaces multiplateformes, une base de données gérée via phpMyAdmin pour stocker les données essentielles, et une API pour gérer les interactions entre l'application et la base de données, assurant ainsi une gestion efficace des informations médicales des résidents.",
+          "Pour développer l'application Medhub, j'ai utilisé un environnement technologique moderne comprenant Visual Studio 2022 comme environnement de développement intégré (IDE), .NET MAUI pour la création d'interfaces multiplateformes, une base de données gérée via phpMyAdmin pour stocker les données essentielles, et une API pour gérer les interactions entre l'application et la base de données, assurant ainsi une gestion efficace des informations médicales des résidents.",
         realization:
-          "Dans la réalisation de l'application EHPAD MedHub, j'ai débuté par l'installation de .NET MAUI ainsi que des packages NuGet nécessaires pour le développement. Ensuite, j'ai créé la base de données via phpMyAdmin et développé une API pour établir la liaison avec la base de données, permettant ainsi la manipulation des données de manière sécurisée. Par la suite, j'ai implémenté les différentes fonctionnalités de l'application, telles que la gestion des stocks de médicaments, les commandes rapides et la comparaison de médicaments. Enfin, j'ai mis en place le routage entre les différentes pages de l'application pour assurer une navigation fluide et intuitive pour les utilisateurs.",
+          "Dans la réalisation de l'application Medhub, j'ai débuté par l'installation de .NET MAUI ainsi que des packages NuGet nécessaires pour le développement. Ensuite, j'ai créé la base de données via phpMyAdmin et développé une API pour établir la liaison avec la base de données, permettant ainsi la manipulation des données de manière sécurisée. Par la suite, j'ai implémenté les différentes fonctionnalités de l'application, telles que la gestion des stocks de médicaments, les commandes rapides et la comparaison de médicaments. Enfin, j'ai mis en place le routage entre les différentes pages de l'application pour assurer une navigation fluide et intuitive pour les utilisateurs.",
         conclusion:
           "Ce projet m'a appris à utiliser des technologies modernes telles que .NET MAUI pour développer une application fonctionnelle répondant aux besoins spécifiques de gestion des stocks pharmaceutiques dans les EHPAD. J'ai renforcé mes compétences en programmation, en conception d'interfaces utilisateur et en gestion de projet, tout en acquérant une sensibilisation accrue aux enjeux de santé liés aux personnes âgées.",
       },
