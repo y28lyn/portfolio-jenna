@@ -56,7 +56,7 @@ const Experience = () => {
       category: "Hospitalier",
     },
     {
-      title: "Agente de service hospitalier",
+      title: "Agent de service hospitalier",
       date: "Janvier 2019 - Avril 2019",
       desc: "Centre Hospitalier Montgelas",
       photoUrl:
