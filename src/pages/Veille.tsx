@@ -1,4 +1,5 @@
 import Card from "../components/article/Card";
+import PresentationCard from "../components/article/PresentationCard";
 import Banniere from "../components/header/Banniere";
 
 const Veille = () => {
@@ -89,6 +90,14 @@ const Veille = () => {
               externalLink={situations.externalLink}
             />
           ))}
+        </section>
+        <section className="flex items-center justify-center mx-auto px-6">
+          <PresentationCard
+            imageUrl="https://images.unsplash.com/photo-1711344209056-37639a63f70a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            title="Réponse à la problématique"
+            description="Les techniques de phishing émergentes deviennent souvent plus sophistiquées, rendant leur détection plus difficile et potentiellement plus dangereuses. Les attaquants exploitent des méthodes personnalisées et des techniques d'ingénierie sociale avancées pour tromper les utilisateurs et accéder à leurs informations sensibles. Bien que les avancées dans les technologies de sécurité aident à contrer ces menaces, la vigilance des utilisateurs reste essentielle pour prévenir les attaques de phishing."
+            width={"md:w-[80vw]"}
+          />
         </section>
       </main>
     </>
