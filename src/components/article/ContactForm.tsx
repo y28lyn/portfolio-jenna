@@ -62,7 +62,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ title, subtitle, desc }) => {
   };
 
   return (
-    <section className="relative z-10 px-20 py-6 flex items-center justify-center">
+    <section className="relative z-10 px-6 md:px-20 py-6 flex items-center justify-center">
       <div className="container">
         <div className="flex flex-wrap lg:justify-between -mx-4">
           <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
