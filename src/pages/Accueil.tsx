@@ -38,6 +38,7 @@ const Accueil = () => {
           subtitle="Étudiante en BTS SIO option SLAM"
           backgroundImageUrl="https://images.unsplash.com/photo-1682695799561-033f55f75b25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           buttonLabel="Explorer"
+          showButton2={false}
         />
       </header>
       <main id="main" className="h-fit container flex justify-center mx-auto">
