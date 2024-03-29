@@ -1,10 +1,66 @@
+import emailjs from "emailjs-com";
+import React, { useState, ChangeEvent, FormEvent } from "react";
+
 interface ContactFormProps {
   title: string;
   subtitle: string;
   desc: string;
 }
 
+interface Errors {
+  [key: string]: string;
+}
+
 const ContactForm: React.FC<ContactFormProps> = ({ title, subtitle, desc }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Errors>({});
+
+  const validateForm = (): boolean => {
+    const tempErrors: Errors = {};
+    tempErrors.name = formData.name ? "" : "Ce champ est requis.";
+    tempErrors.email = /^\S+@\S+\.\S+$/.test(formData.email)
+      ? ""
+      : "Adresse e-mail non valide.";
+    tempErrors.phone = formData.phone ? "" : "Ce champ est requis.";
+    tempErrors.message = formData.message ? "" : "Ce champ est requis.";
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).every((key) => !tempErrors[key]);
+  };
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    emailjs
+      .send("your_service_id", "your_template_id", formData, "your_user_id")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section className="relative z-10 px-20 py-6 flex items-center justify-center">
       <div className="container">
@@ -67,35 +123,53 @@ const ContactForm: React.FC<ContactFormProps> = ({ title, subtitle, desc }) => {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
-            <div className="relative rounded-[10px] border-[1px] border-gray-200 mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-neutral-600 dark:!bg-neutral-800 dark:text-white dark:shadow-none">
-              <form>
+          <div className="w-full lg:w-1/2 xl:w-5/12">
+            <div className="relative rounded-[10px] border-[1px] border-gray-200 p-6 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-neutral-600 dark:!bg-neutral-800 dark:text-white dark:shadow-none">
+              <form onSubmit={handleSubmit}>
                 <div className="mb-6">
                   <input
                     type="text"
                     placeholder="Votre nom et prénom"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                   />
+                  {errors.name && <p className="text-red-500">{errors.name}</p>}
                 </div>
                 <div className="mb-6">
                   <input
                     type="email"
                     placeholder="Votre e-mail"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                   />
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email}</p>
+                  )}
                 </div>
                 <div className="mb-6">
                   <input
                     type="text"
                     placeholder="Votre numéro de téléphone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                   />
+                  {errors.phone && (
+                    <p className="text-red-500">{errors.phone}</p>
+                  )}
                 </div>
                 <div className="mb-6">
                   <textarea
                     placeholder="Votre message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                   ></textarea>
+                  {errors.message && (
+                    <p className="text-red-500">{errors.message}</p>
+                  )}
                 </div>
                 <div>
                   <button
