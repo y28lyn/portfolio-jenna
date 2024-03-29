@@ -1,3 +1,4 @@
+import ContactForm from "../components/article/ContactForm";
 import Banniere from "../components/header/Banniere";
 
 const Contact = () => {
@@ -11,7 +12,13 @@ const Contact = () => {
           buttonLabel="Explorer"
         />
       </header>
-      <main id="main" className="h-screen"></main>
+      <main id="main">
+        <ContactForm
+          title="Contactez-moi"
+          subtitle="N'hésitez pas à m'envoyer un message !"
+          desc="Si vous avez des questions, des commentaires ou souhaitez collaborez avec moi, n'hésitez pas à me contacter. Je suis impatient de discuter avec vous. Utilisez le formulaire ci-dessous ou les coordonnées fournies pour entrer en contact. Merci et à bientôt !"
+        />
+      </main>
     </>
   );
 };

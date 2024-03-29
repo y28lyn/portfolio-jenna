@@ -28,18 +28,6 @@ const Veille = () => {
         "https://incyber.org/article/comment-les-hameconneurs-exploitent-ils-losint/",
     },
     {
-      title: "Diffusion de données piratées à la suite d'une cyberattaque",
-      date: "26 septembre 2022",
-      desc: "CNIL",
-      photoUrl:
-        "https://www.cnil.fr/sites/cnil/files/styles/contenu_generique_visuel/public/thumbnails/image/cybersecurite.jpeg?itok=Ypb1bOnc",
-      bannerUrl:
-        "https://i.pinimg.com/564x/60/9b/01/609b0181f805463898bcffd4eb2fac3c.jpg",
-      showLinkButton: true,
-      externalLink:
-        "https://www.cnil.fr/fr/diffusion-de-donnees-piratees-la-suite-dune-cyberattaque-quels-sont-les-risques-et-les-precautions",
-    },
-    {
       title: "Phishing, vol de données… dans le cloud",
       date: "27 janvier 2024",
       desc: "Yoann Bourgin | L'usine digitale",

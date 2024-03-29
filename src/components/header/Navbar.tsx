@@ -81,7 +81,7 @@ const Navbar = () => {
   return (
     <section>
       <div
-        className={`fixed w-full z-10 top-0 left-0 transition duration-300 ease-in-out ${
+        className={`fixed w-full top-0 left-0 transition duration-300 ease-in-out z-50 ${
           hasScrolled
             ? "bg-black bg-opacity-75 backdrop-filter backdrop-blur-lg"
             : ""
