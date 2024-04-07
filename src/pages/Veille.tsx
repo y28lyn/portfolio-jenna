@@ -72,7 +72,7 @@ const Veille = () => {
         <Banniere
           title="Veille technologique"
           subtitle="Quel est l'impact du phishing sur le monde moderne ?"
-          backgroundImageUrl="https://plus.unsplash.com/premium_photo-1711132342351-020944fc9d52?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          backgroundImageUrl="https://images.unsplash.com/photo-1712460842725-f1c9b3ad5a1e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           buttonLabel="Explorer"
           showButton2={false}
         />

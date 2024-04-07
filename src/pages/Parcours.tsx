@@ -21,7 +21,7 @@ const Parcours = () => {
     {
       icon: faGraduationCap,
       title: "FCIL",
-      date: "Septembre 2021 - Juillet 2022",
+      date: "Septembre 2021 - Mai 2022",
       desc: "Lycée Aragon Picasso",
       photoUrl:
         "https://www.gcc-groupe.com/wp-content/uploads/2021/08/shoootin-photo-1-1110x430.jpg",
