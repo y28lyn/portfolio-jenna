@@ -2,10 +2,6 @@
 
 Bienvenue sur le portfolio de Jenna ! Ce projet a été développé en utilisant React.js, TypeScript et Tailwind CSS. Vous pouvez le consulter en ligne à l'adresse portfolio-jenna.vercel.app.
 
-## Aperçu
-
-[Insérez une image]
-
 ## Fonctionnalités
 
 - Présentation de son travail et de son expérience.
